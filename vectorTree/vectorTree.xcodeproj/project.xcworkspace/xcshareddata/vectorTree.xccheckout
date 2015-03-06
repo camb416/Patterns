@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5E8DD5F2-7D1D-470B-AE04-B0B727C704BF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>vectorTree</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>452AF8FF044EA1244CEF57B845A0E47E70170F8B</key>
+		<string>https://github.com/camb416/Patterns.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>vectorTree/vectorTree.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>452AF8FF044EA1244CEF57B845A0E47E70170F8B</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/camb416/Patterns.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>452AF8FF044EA1244CEF57B845A0E47E70170F8B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>452AF8FF044EA1244CEF57B845A0E47E70170F8B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Patterns</string>
+		</dict>
+	</array>
+</dict>
+</plist>

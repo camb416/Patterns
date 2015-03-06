@@ -2,19 +2,42 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    float radius = 200;
-    /*
-    for(int i=0;i<16;i++){
-        float x1 = ofGetWidth()/2;
-        float y1 = ofGetHeight()/2;
-        float angle = PI*2/16*i;
-        float x2 = x1+cos(angle)*radius;
-        float y2 = y1+sin(angle)*radius;
-        CLine * l = new CLine(x1,y1,x2,y2);
-        lines.push_back(l);
-    }
-     */
-    generateFan(ofPoint(ofGetWidth()/2,ofGetHeight()/2),0, 64,4,200,TWO_PI);
+    //float radius = 200;
+    
+    // GUI Stuff
+    // we add this listener before setting up so the initial circle resolution is correct
+  //  circleResolution.addListener(this, &ofApp::circleResolutionChanged);
+    ringButton.addListener(this,&ofApp::regenerate);
+    
+    gui.setup(); // most of the time you don't need a name
+  //  gui.add(radius.setup( "radius", 140, 10, 300 ));
+    gui.add(center.setup("center",ofVec2f(ofGetWidth()*.5,ofGetHeight()*.5),ofVec2f(0,0),ofVec2f(ofGetWidth(),ofGetHeight())));
+    gui.add(color.setup("color",ofColor(100,100,140),ofColor(0,0),ofColor(255,255)));
+    gui.add(generations.setup("generations", 6, 0, 10));
+    gui.add(twoCircles.setup("two circles"));
+    gui.add(ringButton.setup("regenerate"));
+    gui.add(screenSize.setup("screen size", ""));
+    
+    gui.add(radius.setup("initial radius",100,1,300));
+    gui.add(spokes.setup("spokes",16,1,128));
+    
+    gui.add(cDivisor.setup("children divisor",2.0f,0.5f,4.0f));
+    gui.add(rDivisor.setup("radius divisor",2.0f,0.5f,4.0f));
+    gui.add(sDivisor.setup("spread divisor",2.0f,0.5f,4.0f));
+    
+    
+    
+    gui.loadFromFile("settings.xml");
+    
+    bHide = true;
+    
+    regenerate();
+
+}
+
+void ofApp::regenerate(){
+    lines.clear();
+       generateFan(ofPoint(ofGetWidth()/2,ofGetHeight()/2),0, spokes,generations,radius,TWO_PI);
 }
 
 //--------------------------------------------------------------
@@ -25,9 +48,13 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     ofBackground(255);
-    ofSetColor(0,0,0,16);
+    ofSetColor(color);
     for(int i=0;i<lines.size();i++){
         lines.at(i)->draw();
+    }
+    
+    if( bHide ){
+        gui.draw();
     }
 }
 //void ofApp::renderPostScript(){
@@ -45,7 +72,7 @@ void ofApp::generateFan(ofPoint _p, float _angle, int _children, int _generation
         float x2 = x1+cos(thisAngle)*_radius;
         float y2 = y1+sin(thisAngle)*_radius;
         if(_generations>0){
-            generateFan(ofPoint(x2,y2), thisAngle, _children/2.0f, _generations-1,_radius/1.5f,_spread/1.5f);
+            generateFan(ofPoint(x2,y2), thisAngle, _children/cDivisor, _generations-1,_radius/rDivisor,_spread/sDivisor);
         }
         CLine * l = new CLine(x1,y1,x2,y2);
         lines.push_back(l);
@@ -56,8 +83,19 @@ void ofApp::generateFan(ofPoint _p, float _angle, int _children, int _generation
 void ofApp::keyPressed(int key){
 // declare vector graphics file
 // open vector file
-    for(int i=0;i<lines.size();i++){
+   // for(int i=0;i<lines.size();i++){
        // lines.at(i)->drawPostscript(f);
+   // }
+    
+    
+    if( key == 'h' ){
+        bHide = !bHide;
+    }
+    if(key == 's') {
+        gui.saveToFile("settings.xml");
+    }
+    if(key == 'l') {
+        gui.loadFromFile("settings.xml");
     }
 }
 

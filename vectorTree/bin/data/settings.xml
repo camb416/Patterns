@@ -1,0 +1,10 @@
+<group>
+	<center>512, 384</center>
+	<color>0, 0, 0, 113</color>
+	<circle_res>5</circle_res>
+	<screen_size/>
+<group/>
+<generations>4</generations>
+<initial_radius>125</initial_radius>
+	<spokes>8</spokes>
+</group>

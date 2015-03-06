@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxGui.h"
 #include "CLine.h"
 
 class ofApp : public ofBaseApp{
@@ -28,6 +29,32 @@ private:
                      int        _generations,
                      float      _radius,
                      float      _spread);
+    
+    
+    // GUI stuff
+    bool bHide;
+    ofxIntSlider radius;
+    
+    
+    ofxVec2Slider center;
+    
+    ofxColorSlider color;
+    ofxIntSlider generations;
+    ofxIntSlider spokes;
+    ofxFloatSlider cDivisor;
+    ofxFloatSlider rDivisor;
+    ofxFloatSlider sDivisor;
+    
+    
+    ofxToggle filled;
+    
+    ofxButton twoCircles;
+    ofxButton ringButton;
+    ofxLabel screenSize;
+    
+    ofxPanel gui;
+    
+    void regenerate();
     
     
 		
