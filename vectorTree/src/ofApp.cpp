@@ -57,9 +57,21 @@ void ofApp::draw(){
         gui.draw();
     }
 }
-//void ofApp::renderPostScript(){
+void ofApp::renderPostScript(){
+    // declare vector graphics file
+    // open vector file
+    vectorFile.beginEPS("test.ps");
+    vectorFile.noFill();
+    vectorFile.setColor(0,0,0);
     
-//}
+     for(int i=0;i<lines.size();i++){
+    // lines.at(i)->drawPostscript(f);
+         ofPoint a = lines.at(i)->p1;
+         ofPoint b = lines.at(i)->p2;
+         vectorFile.line(a.x,a.y,b.x,b.y);
+     }
+    vectorFile.endEPS();
+}
 void ofApp::generateFan(ofPoint _p, float _angle, int _children, int _generations, float _radius, float _spread){
     for(int i=0;i<_children;i++){
         float x1 = _p.x;
@@ -81,12 +93,13 @@ void ofApp::generateFan(ofPoint _p, float _angle, int _children, int _generation
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-// declare vector graphics file
-// open vector file
-   // for(int i=0;i<lines.size();i++){
-       // lines.at(i)->drawPostscript(f);
-   // }
-    
+
+    switch(key){
+            case 'v':
+            case 'V':
+            renderPostScript();
+            break;
+    }
     
     if( key == 'h' ){
         bHide = !bHide;

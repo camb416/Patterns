@@ -1,7 +1,13 @@
 #pragma once
 
+// OF
 #include "ofMain.h"
+
+// addons
 #include "ofxGui.h"
+#include "ofxVectorGraphics.h"
+
+// custom
 #include "CLine.h"
 
 class ofApp : public ofBaseApp{
@@ -55,6 +61,10 @@ private:
     ofxPanel gui;
     
     void regenerate();
+    
+    // vector props & methods
+    ofxVectorGraphics vectorFile;
+    void renderPostScript();
     
     
 		

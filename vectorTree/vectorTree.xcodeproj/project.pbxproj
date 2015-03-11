@@ -15,6 +15,8 @@
 		3233891F1AA969440008DAE9 /* ofxSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 323389141AA969440008DAE9 /* ofxSlider.cpp */; };
 		323389201AA969440008DAE9 /* ofxSliderGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 323389161AA969440008DAE9 /* ofxSliderGroup.cpp */; };
 		323389211AA969440008DAE9 /* ofxToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 323389181AA969440008DAE9 /* ofxToggle.cpp */; };
+		3235ADD01AAFE8FB0075FFF4 /* CreEPS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3235ADCA1AAFE8FB0075FFF4 /* CreEPS.cpp */; };
+		3235ADD11AAFE8FB0075FFF4 /* ofxVectorGraphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3235ADCE1AAFE8FB0075FFF4 /* ofxVectorGraphics.cpp */; };
 		765569A31AA9040700416113 /* CLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 765569A21AA9040700416113 /* CLine.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
@@ -85,6 +87,11 @@
 		323389171AA969440008DAE9 /* ofxSliderGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxSliderGroup.h; sourceTree = "<group>"; };
 		323389181AA969440008DAE9 /* ofxToggle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxToggle.cpp; sourceTree = "<group>"; };
 		323389191AA969440008DAE9 /* ofxToggle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxToggle.h; sourceTree = "<group>"; };
+		3235ADCA1AAFE8FB0075FFF4 /* CreEPS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CreEPS.cpp; sourceTree = "<group>"; };
+		3235ADCB1AAFE8FB0075FFF4 /* CreEPS.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CreEPS.hpp; sourceTree = "<group>"; };
+		3235ADCC1AAFE8FB0075FFF4 /* CreEPS_Types.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CreEPS_Types.hpp; sourceTree = "<group>"; };
+		3235ADCE1AAFE8FB0075FFF4 /* ofxVectorGraphics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxVectorGraphics.cpp; sourceTree = "<group>"; };
+		3235ADCF1AAFE8FB0075FFF4 /* ofxVectorGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxVectorGraphics.h; sourceTree = "<group>"; };
 		765569A11AA9039600416113 /* CLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLine.h; sourceTree = "<group>"; };
 		765569A21AA9040700416113 /* CLine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CLine.cpp; sourceTree = "<group>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
@@ -172,9 +179,39 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		3235ADC81AAFE8FB0075FFF4 /* ofxVectorGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				3235ADC91AAFE8FB0075FFF4 /* libs */,
+				3235ADCD1AAFE8FB0075FFF4 /* src */,
+			);
+			name = ofxVectorGraphics;
+			path = ../../../addons/ofxVectorGraphics;
+			sourceTree = "<group>";
+		};
+		3235ADC91AAFE8FB0075FFF4 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				3235ADCA1AAFE8FB0075FFF4 /* CreEPS.cpp */,
+				3235ADCB1AAFE8FB0075FFF4 /* CreEPS.hpp */,
+				3235ADCC1AAFE8FB0075FFF4 /* CreEPS_Types.hpp */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		3235ADCD1AAFE8FB0075FFF4 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				3235ADCE1AAFE8FB0075FFF4 /* ofxVectorGraphics.cpp */,
+				3235ADCF1AAFE8FB0075FFF4 /* ofxVectorGraphics.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				3235ADC81AAFE8FB0075FFF4 /* ofxVectorGraphics */,
 				323389071AA969440008DAE9 /* ofxGui */,
 			);
 			name = addons;
@@ -356,6 +393,8 @@
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 				3233891D1AA969440008DAE9 /* ofxLabel.cpp in Sources */,
+				3235ADD11AAFE8FB0075FFF4 /* ofxVectorGraphics.cpp in Sources */,
+				3235ADD01AAFE8FB0075FFF4 /* CreEPS.cpp in Sources */,
 				765569A31AA9040700416113 /* CLine.cpp in Sources */,
 				3233891B1AA969440008DAE9 /* ofxButton.cpp in Sources */,
 			);
