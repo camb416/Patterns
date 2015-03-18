@@ -24,7 +24,11 @@ class ofApp : public ofBaseApp{
     
     ofMesh mesh;
     ofMesh mesh2;
+    ofMesh mesh3;
 
-    
+    ofLight pointLight;
+    ofLight pointLight2;
+    ofLight pointLight3;
+    ofMaterial material;
 		
 };
