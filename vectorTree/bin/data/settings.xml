@@ -1,10 +1,13 @@
 <group>
 	<center>512, 384</center>
-	<color>0, 0, 0, 113</color>
+	<color>0, 0, 0, 23</color>
 	<circle_res>5</circle_res>
 	<screen_size/>
 <group/>
-<generations>4</generations>
-<initial_radius>125</initial_radius>
-	<spokes>8</spokes>
+<generations>2</generations>
+<initial_radius>99</initial_radius>
+	<spokes>20</spokes>
+<children_divisor>0.745</children_divisor>
+	<radius_divisor>2.635</radius_divisor>
+	<spread_divisor>1.06</spread_divisor>
 </group>

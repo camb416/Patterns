@@ -14,9 +14,9 @@ void ofApp::setup(){
     gui.add(center.setup("center",ofVec2f(ofGetWidth()*.5,ofGetHeight()*.5),ofVec2f(0,0),ofVec2f(ofGetWidth(),ofGetHeight())));
     gui.add(color.setup("color",ofColor(100,100,140),ofColor(0,0),ofColor(255,255)));
     gui.add(generations.setup("generations", 6, 0, 10));
-    gui.add(twoCircles.setup("two circles"));
+    //gui.add(twoCircles.setup("two circles"));
     gui.add(ringButton.setup("regenerate"));
-    gui.add(screenSize.setup("screen size", ""));
+    //gui.add(screenSize.setup("screen size", ""));
     
     gui.add(radius.setup("initial radius",100,1,300));
     gui.add(spokes.setup("spokes",16,1,128));

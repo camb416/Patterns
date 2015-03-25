@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>5E8DD5F2-7D1D-470B-AE04-B0B727C704BF</string>
+	<string>74861F2B-6723-46DD-8DAA-58E175543C8C</string>
 	<key>IDESourceControlProjectName</key>
 	<string>vectorTree</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>452AF8FF044EA1244CEF57B845A0E47E70170F8B</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Patterns</string>
+			<string>patterns</string>
 		</dict>
 	</array>
 </dict>
